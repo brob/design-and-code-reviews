@@ -40,3 +40,10 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Grid Title" name: "gridTitle", widget: "string"}
           - {label: "Page Content", name: "body", widget: "markdown"}
+      - label: "About Page"
+        name: "about"
+        file: "site-src/about.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/about.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Page Content", name: "body", widget: "markdown"}
