@@ -1,0 +1,4 @@
+{
+    "tags": "videos",
+    "layout": "layouts/video.njk"
+}

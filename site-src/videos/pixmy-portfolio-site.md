@@ -1,0 +1,7 @@
+---
+title: 'Web Design Critiques - First Critique @pixmy portfolio site'
+description: 'This is a new series where I take user-submitted websites, apps and projects and provide design feedback. '
+youtube_id: 'rPwgkaoWOeA'
+category: 'design'
+---
+This is a new series where I take user-submitted websites, apps and projects and provide design feedback. In this video, we'll take a look at [the CodePen portfolio of Arturo Cabrera](https://codepen.io/Pixmy/full/XeqvNm).
