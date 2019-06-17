@@ -13,7 +13,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/video.njk"}
       - {label: "tags", name: "tags", widget: "hidden", default: "videos"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "relation", searchFields: ["title"], valueField: "title"}
+      - {label: "Author", name: "author", widget: "relation", collection: "authors", searchFields: ["title"], valueField: "title"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
       - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Just the id at the end of the URL, I'm handling the rest"}
