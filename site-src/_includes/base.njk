@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <title>Peer Reviews</title>
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/videos/">Videos</a>
-            <a href="/sign-up">Request a Review</a>
+        <nav class="navigation">
+            <a class="logo" href="/">Peer Reviews</a>
+            <div class="right-nav">
+              <a href="/videos/">Videos</a>
+              <a href="/sign-up">Request a Review</a>
+            </div>
         </nav>
     </header>
 
@@ -26,6 +29,12 @@
             {{ content | safe }}
         {% endblock mainContent %}
     </main>
+
+  <footer class="site-footer">
+    &copy; 2019 | <a href="https://learnbuildteach.com">Learn. Build. Teach</a> | <a href="https://codecontemporary.com">Code Contemporary</a>
+  </footer>
+
+
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {

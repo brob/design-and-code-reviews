@@ -3,17 +3,17 @@ layout: "base.njk"
 title: "Sign up"
 ---
 
-<form action="/.netlify/functions/trello" method="post">
+<form class="sign-up" action="/.netlify/functions/trello" method="post">
     <label for="name">
         Name
-        <input type="text" name="name">
+        <input class="field" type="text" name="name">
     </label>
     <label for="name">
         URL
-        <input type="text" name="url">
+        <input class="field" type="text" name="url">
     </label>
-    <label for="type">What type of review?
-        <select name="type" id="">
+    <label for="type" class="full-width select">What type of review?
+        <select class="field" name="type" id="">
             <option value="Code Review">Code Review</option>
             <option value="Design Review">Design Review</option>
             <option value="Resume Review">Resumé Review</option>
@@ -22,15 +22,15 @@ title: "Sign up"
     
     <label for="name">
         Social Media:
-        <input type="text" name="social">
+        <input class="field" type="text" name="social">
     </label>
     <label for="email">
         Email
-        <input type="email" name="email">
+        <input class="field" type="email" name="email">
     </label>
-    <label for="description">
+    <label for="description" class="full-width">
         Additional Info:
-        <textarea name="description" id="" cols="50" rows="10"></textarea>
+        <textarea class="field full-width" name="description" id="" cols="50" rows="10"></textarea>
     </label>
 
     <button type="submit">Send your info</button>
