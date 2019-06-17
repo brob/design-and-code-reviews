@@ -15,12 +15,13 @@
         </nav>
     </header>
 
-    <h1>{{ title }}</h1>
+    <main class="content">
+        <h1>{{ title }}</h1>
 
-    {% block mainContent %}
-        {{ content | safe }}
-    {% endblock mainContent %}
-
+        {% block mainContent %}
+            {{ content | safe }}
+        {% endblock mainContent %}
+    </main>
 
     </body>
 </html>
