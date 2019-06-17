@@ -16,6 +16,7 @@ exports.handler = async (event, context) => {
   const listID = '5d03f4f06dc7f6384304ee9d';
   const cardName = `${parsedBody.type} Request: ${parsedBody.url}`;
   const cardDesc = `Requested by: ${parsedBody.name ? parsedBody.name : "Not Provided"}
+                    URL: ${parsedBody.url}
                     Email: ${parsedBody.email ? parsedBody.email : "Not Provided"} 
                     Social: ${parsedBody.social ? parsedBody.social : "Not Provided"} 
                     Additional Info: ${parsedBody.description ? parsedBody.description : "Not Provided"}`
