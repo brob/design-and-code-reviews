@@ -29,3 +29,14 @@ collections:
       - {label: "Bio (for feed)", name: "bio", widget: "text"}
       - {label: "Headshot", name: "headshot", widget: "string"}
       - {label: "Page Content (full bio)", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "site-src/index.md"
+        fields: 
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/homepage.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Grid Title" name: "gridTitle", widget: "string"}
+          - {label: "Page Content", name: "body", widget: "markdown"}
