@@ -18,3 +18,13 @@ collections:
       - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Just the id at the end of the URL, I'm handling the rest"}
       - {label: "Category", name: "category", widget: "select", options: ["design", "code", "portfolio", "resume"]}
       - {label: "Page Content", name: "body", widget: "markdown"}
+  - name: "authors"
+    label: "Authors"
+    folder: "site-src/authors"
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+      - {label: "tags", name: "tags", widget: "hidden", default: "authors"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Bio (for feed)", name: "bio", widget: "text"}
+      - {label: "Headshot", name: "headshot", widget: "string"}
+      - {label: "Page Content (full bio)", name: "body", widget: "markdown"}
