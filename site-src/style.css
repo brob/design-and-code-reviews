@@ -1,8 +1,11 @@
 html {
-    font-size: 18px;
+    font-size: calc(15px + .25vw);
 }
 a {
     color: #de5254;
+}
+p {
+    line-height: 1.3em;
 }
 
 .content {
