@@ -1,6 +1,7 @@
 module.exports = function(config) {
    
 
+    config.addFilter("contents", require("./filters/contents.js"));
 
     config.addPassthroughCopy("./site-src/images");
     config.addPassthroughCopy("./admin");

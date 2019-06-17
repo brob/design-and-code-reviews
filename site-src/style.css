@@ -48,6 +48,7 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
+    display: flex;
 }
 @media (max-width: 640px) {
     .navigation {
