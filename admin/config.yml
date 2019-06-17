@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "site-src/images" # Media files will be stored in the repo under images/uploads
+public_folder: "/images"
+
+collections:
+  - name: "videos"
+    label: "Videos"
+    folder: "site-src/videos"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/video.njk"}
+      - {label: "tags", name: "tags", widget: "hidden", default: "videos"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "YouTube ID", name: "youtube_id", widget: "string", hint: "Just the id at the end of the URL, I'm handling the rest"}
+      - {label: "Category", name: "category", widget: "select", options: ["design", "code", "portfolio", "resume"]}
