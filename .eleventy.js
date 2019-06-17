@@ -2,7 +2,7 @@ module.exports = function(config) {
    
 
 
-    // config.addPassthroughCopy("images");
+    config.addPassthroughCopy("./site-src/images");
     // config.addPassthroughCopy("./admin");
 
     return {

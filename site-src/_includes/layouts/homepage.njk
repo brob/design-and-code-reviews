@@ -1,1 +1,23 @@
 {% extends "base.njk" %}
+
+
+{% block mainContent %}
+{{ super() }}
+
+
+
+<h2>Most recent reviews</h2>
+<ul class="grid">
+{% for video in collections.videos %}
+    <li class="grid__item">
+        <a class="grid__content" href="{{ video.url }}">
+            {% if video.data.thumbnail %}<img src="{{ video.data.thumbnail }}" class="grid__thumb">{% endif %}
+            <h3 class="grid__headline">{{ video.data.title }}</h3>
+            <p class="grid__description">{{ video.data.description }}</p>
+
+        </a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock mainContent %}
