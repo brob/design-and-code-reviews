@@ -1,0 +1,22 @@
+{
+  "name": "critiques",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brob/design-and-code-reviews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brob/design-and-code-reviews/issues"
+  },
+  "homepage": "https://github.com/brob/design-and-code-reviews#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}
