@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6, .logo {
 }
 a {
     color: #de5254;
+    transition: .3s ease-out;
+}
+a:hover {
+    color: #a02729;
 }
 button {
     background-color: #de5254;
@@ -36,9 +40,10 @@ p {
     padding: 1rem 2rem;
     border-bottom: 5px solid #000;
     flex-wrap: wrap;
+    font-size: 1.15rem;
 }
 .logo {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
@@ -70,6 +75,35 @@ p {
     grid-column: content;
 }
 
+.author {
+    display: grid; 
+    grid-template-columns: .5fr 1fr .5fr;
+    grid-template-rows: min-content min-content 1fr;
+    align-content: start;
+    grid-gap: 1rem 2rem;
+    margin-bottom: 4rem;
+    
+}
+.author > * {
+    margin: 0;
+}
+.author__headshot {
+    max-width: 100%;
+    grid-row: 1 / 4;
+}
+.author:nth-child(even) .author__headshot {
+    grid-column: 3;
+    grid-row: 1 / 4;
+}
+.author__name {
+    grid-row: 1;
+    grid-column: span 2;
+    font-size: 2rem;
+}
+.author__bio {
+    grid-row: 2;
+    grid-column: span 2;
+}
 .grid {
     grid-column: grid;
     display: grid;
