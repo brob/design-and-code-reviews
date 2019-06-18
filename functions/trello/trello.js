@@ -21,6 +21,8 @@ exports.handler = async (event, context) => {
                     Social: ${parsedBody.social ? parsedBody.social : "Not Provided"} 
                     Additional Info: ${parsedBody.description ? parsedBody.description : "Not Provided"}`
   console.log(parsedBody);
+  console.log(event.body);
+
 
   trello.addCard(cardName, cardDesc, listID,
   function (error, trelloCard) {
@@ -28,7 +30,7 @@ exports.handler = async (event, context) => {
           console.log('Could not add card:', error);
       }
       else {
-          console.log('Added card:', trelloCard);
+          // console.log('Added card:', trelloCard);
       }
   });
   
