@@ -4,3 +4,4 @@ Up and running:
 
 * `npm install`
 * `netlify dev`
+* Open `localhost:8888` (probably)
