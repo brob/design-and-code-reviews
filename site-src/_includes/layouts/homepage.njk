@@ -5,7 +5,7 @@
 {{ super() }}
 
 
-
+<section class="latest-videos">
 <h2>{{ gridTitle }}</h2>
 <ul class="grid">
 {% for video in collections.videos %}
@@ -19,5 +19,7 @@
     </li>
 {% endfor %}
 </ul>
+
+</section>
 
 {% endblock mainContent %}

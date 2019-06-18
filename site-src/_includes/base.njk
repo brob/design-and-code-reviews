@@ -14,9 +14,14 @@
 <body>
     <header>
         <nav class="navigation">
-            <a class="logo" href="/">{{ "/site-src/images/logo.svg" | contents | safe }}</a>
+            <a class="logo" href="/">
+            <picture>
+              <source media="(max-width: 863px)" srcset="/images/logo-stacked.svg">
+              <source media="(min-width: 864px)" srcset="/images/logo.svg">
+              <img src="/images/logo.svg" alt="Chris standing up holding his daughter Elva">
+            </picture>
             <div class="right-nav">
-              <a href="/videos/">Videos</a>
+              <a href="/videos/">The Reviews</a>
               <a href="/about/">About</a>
               <a href="/sign-up">Request a Review</a>
             </div>

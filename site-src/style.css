@@ -13,6 +13,11 @@ h1, h2, h3, h4, h5, h6, .logo {
     font-family: 'Oswald', 'Arial', 'sans-serif';
     font-weight: 700;
 }
+h1 {
+    font-size: 4rem;
+    line-height: 1.3em;
+    margin-bottom: 1.2rem;
+}
 a {
     color: #de5254;
     transition: .3s ease-out;
@@ -29,7 +34,20 @@ button {
     font-weight: 700;
 }
 p {
-    line-height: 1.3em;
+    line-height: 1.6em;
+}
+
+.button {
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    padding: .75rem 3rem;
+    border-radius: 3px;
+}
+.button:hover {
+    background-color: #de5254;
+    color: white;
 }
 
 
@@ -41,6 +59,7 @@ p {
     border-bottom: 5px solid #000;
     flex-wrap: wrap;
     font-size: 1.15rem;
+    margin-bottom: 3rem;
 }
 .logo {
     font-size: 3.5rem;
@@ -50,13 +69,16 @@ p {
     color: #000;
     display: flex;
 }
+.logo img {
+    width: 100%;
+}
 @media (max-width: 640px) {
     .navigation {
         justify-content: center;
     }
     .logo {
         width: 100%;
-        text-align: center;
+        justify-content: center;
         margin-bottom: 1rem;
     }
 }
@@ -66,6 +88,23 @@ p {
 }
 .right-nav a + a {
     margin-left: 2rem;
+}
+@media (max-width: 864px) {
+    .right-nav {
+        display: block;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .right-nav a  {
+        margin-bottom: 1rem;
+        display: block;
+        text-align: left;
+    }
+    .right-nav a + a {
+        margin-left: 0;
+
+    }
 }
 
 .content {
@@ -84,6 +123,9 @@ p {
     grid-gap: 1rem 2rem;
     margin-bottom: 4rem;
     
+}
+.author:first-of-type {
+    margin-top: 4rem;
 }
 .author > * {
     margin: 0;
@@ -104,6 +146,10 @@ p {
 .author__bio {
     grid-row: 2;
     grid-column: span 2;
+}
+.latest-videos {
+    grid-column: grid;
+    margin-top: 4rem;
 }
 .grid {
     grid-column: grid;

@@ -1,5 +1,5 @@
 ---
-title: "Videos"
+title: "Recent Critiques and Reviews"
 layout: "layouts/videos.njk"
 eleventyExcludeFromCollections: true
 ---
