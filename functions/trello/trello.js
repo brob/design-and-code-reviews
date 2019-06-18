@@ -9,7 +9,7 @@ function fromBase64( encodedValue ) {
 
 
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-exports.handler = async (event, context) => {
+exports.handler = (event, context) => {
 
   const body = fromBase64(event.body);
   const parsedBody = querystring.parse(body);
@@ -30,23 +30,19 @@ exports.handler = async (event, context) => {
   function (error, trelloCard) {
       if (error) {
           console.log('Could not add card:', error);
+          return {
+            statusCode: 500,
+            body: error
+          }
       }
       else {
-          // console.log('Added card:', trelloCard);
+          console.log('Added card:', trelloCard);
+          return {
+            statusCode: 200,
+            body: JSON.stringify(trelloCard) 
+          }
       }
   });
   
 
-
-
-  try {
-    const subject = event.queryStringParameters.name || "World";
-    const response = {
-      statusCode: 200,
-      body: JSON.stringify({ message: `Hello ${subject}` }) 
-    }
-    return response;
-  } catch (err) {
-    return { statusCode: 500, body: err.toString() };
-  }
-};
+}
