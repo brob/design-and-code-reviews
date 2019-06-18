@@ -20,10 +20,10 @@ exports.handler = (event, context) => {
                     Email: ${parsedBody.email ? parsedBody.email : "Not Provided"} 
                     Social: ${parsedBody.social ? parsedBody.social : "Not Provided"} 
                     Additional Info: ${parsedBody.description ? parsedBody.description : "Not Provided"}`
-  
-  console.log(body);
-  console.log(parsedBody);
-  console.log(event.body);
+  console.log('event', event);
+  console.log('body', body);
+  console.log('parsed', parsedBody);
+  console.log('event body:', event.body);
 
 
   trello.addCard(cardName, cardDesc, listID,
