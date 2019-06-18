@@ -12,7 +12,7 @@ function fromBase64( encodedValue ) {
 exports.handler = (event, context) => {
   let body = event.isBase64Encoded ? fromBase64(event.body) : event.body;
 
-  const parsedBody = querystring.parse(body);
+  const parsedBody = JSON.parse(body);
   const listID = '5d03f4f06dc7f6384304ee9d';
   const cardName = `${parsedBody.type} Request: ${parsedBody.url}`;
   const cardDesc = `Requested by: ${parsedBody.name ? parsedBody.name : "Not Provided"}
@@ -32,11 +32,11 @@ exports.handler = (event, context) => {
       }
       else {
           console.log('Added card:', trelloCard);
-          return {
-            statusCode: 200,
-            body: JSON.stringify(trelloCard) 
-          }
+          
       }
   });
-
+  return {
+    statusCode: 200,
+    body: "success"
+  }
 }
