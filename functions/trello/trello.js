@@ -20,6 +20,8 @@ exports.handler = async (event, context) => {
                     Email: ${parsedBody.email ? parsedBody.email : "Not Provided"} 
                     Social: ${parsedBody.social ? parsedBody.social : "Not Provided"} 
                     Additional Info: ${parsedBody.description ? parsedBody.description : "Not Provided"}`
+  
+  console.log(body);
   console.log(parsedBody);
   console.log(event.body);
 
