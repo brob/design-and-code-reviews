@@ -10,8 +10,8 @@ function fromBase64( encodedValue ) {
 
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = (event, context) => {
+  let body = event.isBase64Encoded ? fromBase64(event.body) : event.body;
 
-  const body = fromBase64(event.body);
   const parsedBody = querystring.parse(body);
   const listID = '5d03f4f06dc7f6384304ee9d';
   const cardName = `${parsedBody.type} Request: ${parsedBody.url}`;
