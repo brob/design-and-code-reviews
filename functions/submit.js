@@ -9,10 +9,11 @@ function fromBase64( encodedValue ) {
 
 
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-exports.handler = (event, context) => {
+exports.handler = (event, context, callback) => {
   let body = event.isBase64Encoded ? fromBase64(event.body) : event.body;
 
   const parsedBody = JSON.parse(body);
+  console.log(parsedBody);
   const listID = '5d03f4f06dc7f6384304ee9d';
   const cardName = `${parsedBody.type} Request: ${parsedBody.url}`;
   const cardDesc = `Requested by: ${parsedBody.name ? parsedBody.name : "Not Provided"}
@@ -25,18 +26,26 @@ exports.handler = (event, context) => {
   function (error, trelloCard) {
       if (error) {
           console.log('Could not add card:', error);
-          return {
+          return callback(error, {
             statusCode: 500,
-            body: error
-          }
+          });
+      }
+      //?trello API returns a string error message (not an error) if the key is invalid
+      //?for now, we can check to see if trelloCard is of type object
+      else if(typeof trelloCard !== 'object') {
+        console.log("Could not add card, but trello did not return an error");
+        return callback(null, {
+          statusCode: 500,
+          body: "Could not add card"
+        });
       }
       else {
-          console.log('Added card:', trelloCard);
-          
+        console.log('Added card:', trelloCard);
+        return callback(null, {
+          statusCode: 200,
+          body:"success"
+        });
       }
   });
-  return {
-    statusCode: 200,
-    body: "success"
-  }
+  
 }
