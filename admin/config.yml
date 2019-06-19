@@ -9,6 +9,7 @@ collections:
   - name: "videos"
     label: "Videos"
     folder: "site-src/videos"
+    create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/video.njk"}
       - {label: "tags", name: "tags", widget: "hidden", default: "videos"}
