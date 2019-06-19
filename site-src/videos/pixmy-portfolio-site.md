@@ -1,5 +1,5 @@
 ---
-title: Web Design Critiques - First Critique @pixmy portfolio site test
+title: '@pixmy portfolio site test'
 author: Bryan Robinson
 description: >-
   This is a new series where I take user-submitted websites, apps and projects
