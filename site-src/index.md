@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/homepage.njk'
-title: "Get a Design Critique or Code Review"
+title: "Get a Design or Code Review"
 gridTitle: Most recent reviews
 ---
 
