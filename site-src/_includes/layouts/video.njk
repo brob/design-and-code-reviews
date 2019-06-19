@@ -1,15 +1,25 @@
 {% extends "base.njk" %}
 
 {% block mainContent %}
-
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/{{ youtube_id }}" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen
-></iframe>
+<figure style="position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; margin: 0 0 1rem 0;">
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/{{ youtube_id }}" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;"
+    ></iframe>
+</figure>
 
 {{ content | safe }}
 

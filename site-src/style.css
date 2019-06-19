@@ -84,7 +84,9 @@ p {
 }
 .right-nav {
     display: flex;
-    
+}
+.navigation a {
+    text-decoration: none;
 }
 .right-nav a + a {
     margin-left: 2rem;
@@ -195,7 +197,7 @@ p {
     background-color: #333;
 }
 .grid__headline {
-    font-size: 3rem;
+    font-size: 2.25rem;
     margin-top: 1rem;
 }
 .grid__description {
