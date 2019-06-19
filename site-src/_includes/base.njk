@@ -23,6 +23,25 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
 
 
+      <meta name="twitter:card" content="summary" />
+
+      {% if title %}
+      <meta property="og:title" content="{{ title }}" />
+      {% endif %}
+
+      {% if description %}
+      <meta name="description" content="{{ description | escape }}">
+      <meta property="og:description" content="{{ description | escape }}" />
+      {% endif %}
+
+      {% if thumbnail %}
+        <meta name="og:image" content="https://peerreviews.com{{ thumbnail }}" />
+        {% else %}
+        <meta name="og:image" content="https://peerreviews.com/images/favicons/apple-icon-180x180.png" />
+
+      {% endif %}
+
+
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
