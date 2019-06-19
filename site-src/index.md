@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/homepage.njk'
 title: "Get a Design or Code Review"
+description: "If you have been looking for someone to provide insight into your design or code, you're in the right place! James Q. Quick and Bryan Robinson provide expert feedback on your code, designs and resumé. All for free. We know. You're welcome."
 gridTitle: Most recent reviews
 ---
 
