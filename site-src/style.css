@@ -201,7 +201,18 @@ p {
 .grid__description {
     color: #444;
 }
-
+.feedback {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+    transition: .5s ease-out;
+    padding: 0 2rem;
+    max-height: 0;
+}
+.feedback.success {
+    background-color: lightgreen;
+    max-height: 100%;
+}
 .sign-up {
     display: grid;
     grid-template-columns: 1fr 1fr;

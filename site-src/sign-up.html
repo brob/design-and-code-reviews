@@ -3,6 +3,8 @@ layout: "base.njk"
 title: "Sign up"
 ---
 
+<div class="feedback"></div>
+
 <form class="sign-up" action="/.netlify/functions/submit" method="post">
     <label for="name">
         Name *
@@ -50,7 +52,7 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 }, {});
 
 
-function postData(url = '', data = {}) {
+function postData(url = '', data = {}, form = '') {
   // Default options are marked with *
     return fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -67,7 +69,12 @@ function postData(url = '', data = {}) {
     })
     .then(response => {
         console.log(response);
-        
+        let feedbackArea = document.querySelector('.feedback');
+        feedbackArea.classList.add(`${status = 200 ? "success" : "failure"}`);
+        feedbackArea.innerHTML = `<p class="success">${status = 200 ? "We've got it added to the list!" : "Something went wrong"}`
+        form.reset();
+        console.log(response.body);
+
     }); // parses JSON response into native Javascript objects 
 }
 (() => {
@@ -76,7 +83,7 @@ function postData(url = '', data = {}) {
         const form = e.currentTarget;
         e.preventDefault();
         const formData = formToJSON(form.elements);
-        postData(form.action, formData);
+        postData(form.action, formData, form);
     });
 
 })();
