@@ -8,7 +8,7 @@
 <section class="latest-videos">
 <h2>{{ gridTitle }}</h2>
 <ul class="grid">
-{% for video in collections.videos | reverse %}
+{% for video in collections.videos %}
     {% include "components/video-grid-item.njk" %}
 {% endfor %}
 </ul>
