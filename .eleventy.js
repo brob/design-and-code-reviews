@@ -6,6 +6,21 @@ module.exports = function(config) {
     config.addPassthroughCopy("./site-src/images");
     config.addPassthroughCopy("./admin");
 
+    config.addCollection('videos', collection => {
+      const videoCollection = collection.getFilteredByTag("videos");
+
+      const videosFiltered = videoCollection.filter((video => {
+        const today = new Date();
+        today.setHours(0,0,0,0);
+        console.log(video.date.getTime() <= today);
+        return video.date.getTime() <= today;
+      }));
+
+
+      return videosFiltered.reverse();
+    });
+
+
     return {
         dir: {
           input: "site-src",

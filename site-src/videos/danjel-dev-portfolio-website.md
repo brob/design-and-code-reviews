@@ -9,6 +9,7 @@ description: >-
 thumbnail: /images/design-critique.jpg
 youtube_id: E8EsuOfoptQ
 category: design
+date: 2019-06-19
 ---
 In this video, we'll take a look at another developer portfolio and give some tips and tricks around visual hierarchy and spacing.
 

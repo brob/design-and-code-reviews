@@ -8,7 +8,7 @@
 <section class="latest-videos">
 <h2>{{ gridTitle }}</h2>
 <ul class="grid">
-{% for video in collections.videos %}
+{% for video in collections.videos | reverse %}
     <li class="grid__item">
         <a class="grid__content" href="{{ video.url }}">
             {% if video.data.thumbnail %}<img src="{{ video.data.thumbnail }}" class="grid__thumb">{% endif %}
