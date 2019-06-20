@@ -1,7 +1,12 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function(config) {
    
 
     config.addFilter("contents", require("./filters/contents.js"));
+
+
+    config.addPlugin(pluginRss);
 
     config.addPassthroughCopy("./site-src/images");
     config.addPassthroughCopy("./admin");
