@@ -1,0 +1,24 @@
+---
+permalink: '/feed.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+	<subtitle></subtitle>
+	<link href="{{ site.url }}{{ permalink }}" rel="self"/>
+	<link href="{{ site.url }}/"/>
+	<updated>{{ collections.videos | rssLastUpdatedDate }}</updated>
+	<id>{{ site.url }}</id>
+	{% for video in collections.videos %}
+        {% set absolutePostUrl %}{{ site.url }}{{ video.url | url }}{% endset %}
+        <entry>
+            <title>{{ video.data.title }}</title>
+            <link href="{{ absolutePostUrl }}"/>
+            <updated>{{ video.date | rssDate }}</updated>
+            <id>{{ absolutePostUrl }}</id>
+            <content type="html"><![CDATA[
+            {{ video.templateContent | safe }}
+            ]]></content>
+        </entry>
+	{% endfor %}
+</feed>
