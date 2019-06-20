@@ -17,8 +17,10 @@ module.exports = function(config) {
       const videosFiltered = videoCollection.filter((video => {
         const today = new Date();
         today.setHours(0,0,0,0);
-        console.log(video.date.getTime() <= today);
-        return video.date.getTime() <= today;
+
+        const videoDate = video.date.setHours(0,0,0,0);
+
+        return videoDate <= today;
       }));
 
 

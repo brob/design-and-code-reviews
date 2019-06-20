@@ -2,7 +2,7 @@
 layout: layouts/video.njk
 tags: videos
 title: Learn. Build. Teach. with James Q. Quick
-name: '2019-06-27'
+date: '2019-06-27'
 author: Bryan Robinson
 description: >
   This design critique is a special one for me. It features my friend James

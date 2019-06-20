@@ -2,7 +2,7 @@
 layout: layouts/video.njk
 tags: videos
 title: epicMail code review for @devDebelistic
-name: '2019-06-20'
+date: '2019-06-20'
 author: James Q. Quick
 description: >-
   Code Reviews++ is a series where I take submitted projects from developers and
