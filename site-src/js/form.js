@@ -26,12 +26,10 @@ function postData(url = '', data = {}, form = '') {
         body: JSON.stringify(data), // body data type must match "Content-Type" header
     })
         .then(response => {
-            console.log(response);
             let feedbackArea = document.querySelector('.feedback');
             feedbackArea.classList.add(`${status = 200 ? "success" : "failure"}`);
             feedbackArea.innerHTML = `<p class="success">${status = 200 ? "We've got it added to the list!" : "Something went wrong"}`
             form.reset();
-            console.log(response.body);
 
         }); // parses JSON response into native Javascript objects 
 }
