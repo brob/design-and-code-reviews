@@ -1,4 +1,3 @@
-console.log("Hello!!!");
 
 function ajaxSuccess() {
     console.log('success');
