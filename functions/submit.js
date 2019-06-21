@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const querystring = require('querystring');
 const Trello = require('trello');
-var trello = new Trello(process.env.TRELLO_K, process.env.TRELLO_TOKEN);
+var trello = new Trello(process.env.TRELLO_KEY, process.env.TRELLO_TOKEN);
 var validator = require('validator');
 
 function fromBase64( encodedValue ) {
