@@ -19,6 +19,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "dotenv": "^8.0.0",
     "nodejs-base64": "^1.0.3",
     "trello": "^0.9.1",
     "validator": "^11.0.0"
