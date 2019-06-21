@@ -12,8 +12,7 @@ function fromBase64( encodedValue ) {
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = (event, context, callback) => {
   let body = event.isBase64Encoded ? fromBase64(event.body) : event.body;
-
-  const parsedBody = JSON.parse(body);
+  const parsedBody = event.isBase64Encoded ? querystring.parse(body) : JSON.parse(body);
   console.log(parsedBody);
 
   //Validate inputs
