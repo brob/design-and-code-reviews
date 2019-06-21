@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
     })
   }
 
-  const listID = '5d03f4f06dc7f6384304ee9d';
+  const listID = process.env.TRELLO_LIST_ID;
   const cardName = `${parsedBody.type} Request: ${parsedBody.url}`;
   const cardDesc = `Requested by: ${parsedBody.name ? parsedBody.name : "Not Provided"}
                     URL: ${parsedBody.url}
