@@ -15,7 +15,7 @@ category: design
 ---
 This design critique is a special one for me. It features my friend James Quick and his educational resource site Learn. Build. Teach. I'm excited to share insights about improving the design, but also to share this amazing resource to learn more about development.
 
-Site: [https://learnbuildteach.com](https://learnbuildteach.com)
+Site: [https://www.learnbuildteach.com](https://www.learnbuildteach.com)
 
 Check out James on YouTube here: [https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw)
 
