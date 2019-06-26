@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const querystring = require('querystring');
 const Trello = require('trello');
 var trello = new Trello(process.env.TRELLO_KEY, process.env.TRELLO_TOKEN);
@@ -8,12 +10,11 @@ function fromBase64( encodedValue ) {
 }
 
 
-
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 exports.handler = (event, context, callback) => {
-  let body = event.isBase64Encoded ? fromBase64(event.body) : event.body;
 
-  const parsedBody = JSON.parse(body);
+  let body = event.isBase64Encoded ? fromBase64(event.body) : event.body;
+  const parsedBody = event.isBase64Encoded ? querystring.parse(body) : JSON.parse(body);
   console.log(parsedBody);
 
   //Validate inputs
@@ -41,7 +42,7 @@ exports.handler = (event, context, callback) => {
     })
   }
 
-  const listID = '5d03f4f06dc7f6384304ee9d';
+  const listID = process.env.TRELLO_LIST_ID;
   const cardName = `${parsedBody.type} Request: ${parsedBody.url}`;
   const cardDesc = `Requested by: ${parsedBody.name ? parsedBody.name : "Not Provided"}
                     URL: ${parsedBody.url}
