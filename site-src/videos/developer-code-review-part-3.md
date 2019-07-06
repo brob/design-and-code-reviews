@@ -7,7 +7,7 @@ author: James Q. Quick
 description: >-
   In this Code Review, we will look at a React application built to track soccer
   workouts.
-thumbnail: /images/cover.png
+thumbnail: /images/cover-3.png
 youtube_id: 4q5GB3-JZlI
 category: code
 ---
